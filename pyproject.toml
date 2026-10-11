@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-pin-verify"
+version = "0.1.0"
+description = "Integrity verifier for AI agent skill packages: pin tarballs by SHA-256 and scan for install hooks, exfiltration, and obfuscation."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hao li" }]
+keywords = ["ai-agents", "skills", "security", "integrity", "pinning"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/skill-pin-verify"
+Repository = "https://github.com/hahahahahahahahah6/skill-pin-verify"
+
+[project.scripts]
+skill-pin-verify = "skill_pin_verify.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["skill_pin_verify*"]
